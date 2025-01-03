@@ -49,7 +49,7 @@ const Search = ({ baseUrl }) => {
           onChange={handleSearchChange}
         />
         <div className="search-icon">
-          <img src="/icons/search.svg" alt="Search" />
+          <img src="../../../../public/icons/search.svg" alt="Search" />
         </div>
       </div>
       {searchString && (
