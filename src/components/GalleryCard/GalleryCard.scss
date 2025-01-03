@@ -1,0 +1,81 @@
+$gallery-card-width-desktop: 100%;
+$gallery-card-width-mobile: 80%;
+$card-img-width-desktop: 387px;
+$card-img-height-desktop: 445px;
+$card-img-width-mobile: 287px;
+$card-img-height-mobile: 345px;
+$description-block-font-size-desktop: 17px;
+$description-block-font-size-mobile: 15px;
+$description-block-width-desktop: 335px;
+$description-block-width-mobile: 200px;
+$description-block-padding-desktop: 17px 25px;
+$description-block-padding-mobile: 12px 20px;
+$gallery-gap: 60px;
+
+.gallery-container {
+  display: flex;
+  gap: $gallery-gap;
+
+  .gallery-card {
+    position: relative;
+    width: $gallery-card-width-desktop;
+
+    .card-img {
+      position: relative;
+      width: $card-img-width-desktop;
+      height: $card-img-height-desktop;
+
+      @media only screen and (max-width: 420px) {
+        width: $card-img-width-mobile;
+        height: $card-img-height-mobile;
+      }
+    }
+    @media only screen and (max-width: 420px) {
+     margin-top: 60px;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    display: block;
+  }
+}
+    .description-block {
+      position: absolute;
+      font-size: $description-block-font-size-desktop;
+      bottom: -15%;
+      left: 25px;
+      width: $description-block-width-desktop;
+      height: 132px;
+      padding: $description-block-padding-desktop;
+      background: rgba(255, 255, 255, 1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media only screen and (max-width: 420px) {
+        font-size: $description-block-font-size-mobile;
+        left: 25px;
+        width: $description-block-width-mobile;
+        padding: $description-block-padding-mobile;
+      }
+    }
+
+    .card-name {
+      font-weight: 500;
+      text-decoration: none;
+      color: rgba(57, 57, 57, 1);
+    }
+
+    .card-author {
+      color: rgba(224, 164, 73, 1);
+      font-weight: 400;
+    }
+
+    .card-status {
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: flex-end;
+    }

@@ -1,0 +1,51 @@
+.thumbnail-card {
+  width: 415px;
+  height: 130px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 13px;
+  margin-bottom: 16px;
+
+  .thumbnail-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .thumbnail-text {
+    font-size: 15px;
+
+    .thumbnail-name {
+      font-weight: 500;
+      text-decoration: none;
+      color: rgba(57, 57, 57, 1);
+    }
+
+    .thumbnail-author {
+      color: rgba(224, 164, 73, 1);
+      font-weight: 400;
+    }
+
+    .thumbnail-status {
+      margin-top: 8px;
+      font-weight: 700;
+    }
+  }
+
+  .thumbnail-button {
+    margin-left: auto;
+  }
+}
+
+.thumbnail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 420px) {
+    .thumbnail-card {
+      width: 345px;
+    }
+  }
+}

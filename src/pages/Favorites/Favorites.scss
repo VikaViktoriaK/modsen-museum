@@ -1,0 +1,35 @@
+h1 {
+  .orange-span {
+    color: rgba(241, 121, 0, 1);
+  }
+
+  @media only screen and (max-width: 420px) {
+    font-size: 30px;
+  }
+}
+
+.favorites-icon {
+  padding-right: 25px;
+
+  @media only screen and (max-width: 420px) {
+    width: 10%;
+  }
+}
+
+.section-title {
+  margin-top: 120px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-text {
+  display: block;
+  font-size: 16px;
+  color: rgba(224, 164, 73, 1);
+
+  @media only screen and (max-width: 420px) {
+    font-size: 12px;
+  }
+}
