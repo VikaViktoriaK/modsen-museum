@@ -6,15 +6,6 @@ $margin-top: 120px;
   background-color: $footer-background;
   height: $footer-height;
   margin-top: $margin-top;
-
-  .header-content {
-    height: $footer-height;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .header-logo {
-      display: block;
-    }
-  }
+  display: flex;
+  align-items: center;
 }

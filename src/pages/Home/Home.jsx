@@ -4,7 +4,7 @@ import Gallery from "../../components/Gallery/Gallery.jsx";
 import Recommendations from "../../components/Recommendations/Recommendations.jsx";
 import "./Home.scss";
 
-function App() {
+function Home() {
   return (
     <Container>
       <div className="header-block">
@@ -20,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

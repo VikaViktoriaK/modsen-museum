@@ -1,20 +1,11 @@
-import React, { useState } from "react";
-import "./SaveButton.scss";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const SaveButton = ({ addFavorite }) => {
-  const [isSaved, setIsSaved] = useState(false);
-
-  const handleClick = () => {
-    setIsSaved((prevIsSaved) => !prevIsSaved);
-    addFavorite();
-  };
-
+const FavoriteLink = () => {
   return (
-    <button
-      className={`save-button ${isSaved ? "active" : ""}`}
-      onClick={handleClick}
-    >
+    <Link to="/favorite" className="header-link">
       <svg
+        className="header-img"
         width="24"
         height="25"
         viewBox="0 0 24 25"
@@ -29,8 +20,8 @@ const SaveButton = ({ addFavorite }) => {
           strokeLinejoin="round"
         />
       </svg>
-    </button>
+      <span className="header-text">Your favorites</span>
+    </Link>
   );
 };
-
-export default SaveButton;
+export default FavoriteLink;

@@ -7,7 +7,7 @@ import Home from "./pages/Home/Home.jsx";
 import "./App.scss";
 
 const App = () => (
-  <BrowserRouter basename="/modsen-museum/">
+  <BrowserRouter basename="/modsen-museum">
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />

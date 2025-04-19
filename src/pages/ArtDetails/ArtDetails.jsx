@@ -4,10 +4,10 @@ import "./ArtDetails.scss";
 import { Container } from "../../components/Container/Container.jsx";
 
 const ArtDetails = () => {
-  const { id } = useParams(); // Destructure id from params
-  const [artData, setArtData] = useState(null); // State for storing artwork data
-  const [loading, setLoading] = useState(true); // State for loading status
-  const [error, setError] = useState(null); // State for error handling
+  const { id } = useParams();
+  const [artData, setArtData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchArtData = async () => {
@@ -42,13 +42,15 @@ const ArtDetails = () => {
     <Container>
       <div className="details-block">
         {artData?.thumbnail ? (
-          <img
-            className="details-img"
-            src={artData.thumbnail.lqip}
-            alt={artData.thumbnail.alt_text}
-          />
+          <div className="img-block">
+            <img
+              className="details-img"
+              src={artData.thumbnail.lqip}
+              alt={artData.thumbnail.alt_text}
+            />
+          </div>
         ) : (
-          <div>No Image Available</div> // Fallback if no image
+          <div>No Image Available</div>
         )}
         <div className="details-content">
           <div>
