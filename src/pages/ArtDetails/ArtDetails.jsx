@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ArtDetails.scss";
 import { Container } from "../../components/Container/Container.jsx";
+import Loader from "../../components/Loader/Loader.jsx";
 
 const ArtDetails = () => {
   const { id } = useParams();
@@ -31,7 +32,7 @@ const ArtDetails = () => {
   }, [id]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />;
   }
 
   if (error) {

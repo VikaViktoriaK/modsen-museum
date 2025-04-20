@@ -36,11 +36,12 @@ h1 {
 
 .favorites-block {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 16px;
 }
 
 .empty-message {
-  text-align: center;
   font-size: 25px;
 }
