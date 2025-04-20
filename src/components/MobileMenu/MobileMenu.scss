@@ -1,7 +1,12 @@
 .mobile-menu {
+  display: none;
   margin: 15px;
-  padding: 5px;
+  padding: 25px;
   background-color: rgb(57, 57, 57);
   border: 3px solid rgba(224, 164, 73, 1);
   border-radius: 5px;
+  @media only screen and (max-width: 420px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }

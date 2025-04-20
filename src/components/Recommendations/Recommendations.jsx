@@ -1,7 +1,6 @@
 import React from "react";
 import "./Recommendations.scss";
 import PostsGallery from "../PostsGallery/PostsGallery.jsx";
-import Select from "../UI/Select/Select.jsx";
 
 const Recommendations = () => (
   <div>

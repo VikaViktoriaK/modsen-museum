@@ -7,9 +7,9 @@ $card-img-height-mobile: 345px;
 $description-block-font-size-desktop: 17px;
 $description-block-font-size-mobile: 15px;
 $description-block-width-desktop: 335px;
-$description-block-width-mobile: 200px;
+$description-block-width-mobile: 225px;
 $description-block-padding-desktop: 17px 25px;
-$description-block-padding-mobile: 12px 20px;
+$description-block-padding-mobile: 8px 10px;
 $gallery-gap: 60px;
 
 .gallery-container {
@@ -31,51 +31,76 @@ $gallery-gap: 60px;
       }
     }
     @media only screen and (max-width: 420px) {
-     margin-top: 60px;
+      margin-top: 60px;
     }
   }
   @media only screen and (max-width: 420px) {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 }
-    .description-block {
-      position: absolute;
-      font-size: $description-block-font-size-desktop;
-      bottom: -15%;
-      left: 25px;
-      width: $description-block-width-desktop;
-      height: 132px;
-      padding: $description-block-padding-desktop;
-      background: rgba(255, 255, 255, 1);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+.description-block {
+  position: absolute;
+  font-size: $description-block-font-size-desktop;
+  bottom: -15%;
+  left: 25px;
+  width: $description-block-width-desktop;
+  height: 132px;
+  padding: $description-block-padding-desktop;
+  background: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-      @media only screen and (max-width: 420px) {
-        font-size: $description-block-font-size-mobile;
-        left: 25px;
-        width: $description-block-width-mobile;
-        padding: $description-block-padding-mobile;
-      }
-    }
+  @media only screen and (max-width: 420px) {
+    font-size: $description-block-font-size-mobile;
+    left: 25px;
+    width: $description-block-width-mobile;
+    padding: $description-block-padding-mobile;
+    height: 100px;
+  }
+}
 
-    .card-name {
-      font-weight: 500;
-      text-decoration: none;
-      color: rgba(57, 57, 57, 1);
-    }
+.card-name {
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(57, 57, 57, 1);
+}
 
-    .card-author {
-      color: rgba(224, 164, 73, 1);
-      font-weight: 400;
-    }
+.card-author {
+  color: rgba(224, 164, 73, 1);
+  font-weight: 400;
+}
 
-    .card-status {
-      margin-top: 8px;
-      font-weight: 700;
-    }
+.card-status {
+  margin-top: 8px;
+  font-weight: 700;
+}
 
-    .pagination {
-      display: flex;
-      justify-content: flex-end;
-    }
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media only screen and (max-width: 420px) {
+  .card-name {
+    font-size: 12px;
+    color: rgba(57, 57, 57, 0.7);
+  }
+
+  .card-author {
+    font-size: 10px;
+    color: rgba(224, 164, 73, 0.7);
+  }
+
+  .card-status {
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  .pagination {
+    justify-content: center;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+}
