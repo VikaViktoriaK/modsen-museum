@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "./ArtDetails.scss";
 import { Container } from "../../components/Container/Container.jsx";
 import Loader from "../../components/Loader/Loader.jsx";
+import { generateImageUrl } from "../../assets/helpers/generateImageUrl.js";
 
 const ArtDetails = () => {
   const { id } = useParams();
@@ -42,12 +43,14 @@ const ArtDetails = () => {
   return (
     <Container>
       <div className="details-block">
-        {artData?.thumbnail ? (
+        {artData?.image_id ? (
           <div className="img-block">
             <img
               className="details-img"
-              src={artData.thumbnail.lqip}
-              alt={artData.thumbnail.alt_text}
+              src={generateImageUrl(artData.image_id)} // Fix: Reference artData.image_id
+              alt={
+                artData.thumbnail?.alt_text || "No image description available"
+              } // Add fallback for alt text
             />
           </div>
         ) : (
@@ -56,8 +59,14 @@ const ArtDetails = () => {
         <div className="details-content">
           <div>
             <h2 className="details-title">{artData.title}</h2>
-            <p className="artist-name">{artData.artist_title}</p>
-            <p className="art-age">{artData.date_display}</p>
+            <p className="artist-name">
+              {artData.artist_title || "Unknown Artist"}
+            </p>{" "}
+            {/* Add fallback */}
+            <p className="art-age">
+              {artData.date_display || "Date not provided"}
+            </p>{" "}
+            {/* Add fallback */}
           </div>
           <div className="overview-block">
             <h2 className="details-title">Overview</h2>
